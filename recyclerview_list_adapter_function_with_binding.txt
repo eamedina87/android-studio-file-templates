@@ -34,7 +34,9 @@ class ${NAME}(
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: ${Model_Class}, clickListener: (${Model_Class}) -> Unit) = with(binding) {
             // TODO: Bind the data with View
-        
+            itemView.setOnClickListener {
+                clickListener.invoke(item)
+            }
         }
     }
     
