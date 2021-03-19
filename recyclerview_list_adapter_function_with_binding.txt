@@ -1,7 +1,6 @@
 #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}#end
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -18,7 +17,7 @@ class ${NAME}(
             parent,
             false
         )
-        return ItemViewHolder(view)
+        return ItemViewHolder(view, imageLoader)
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
